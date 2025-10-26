@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: stage_two_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=adminpassword
+      - MYSQL_DATABASE=stage_two
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=adminpassword
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
