@@ -43,6 +43,8 @@ go install github.com/air-verse/air@latest
 
 Run Locally
 
+
+
 Clone the repository
 
 git clone <repo_url>
@@ -52,6 +54,15 @@ cd <repo_folder>
 Install dependencies
 
 go mod tidy
+
+# Enviroment variables
+
+Create an .evn file and past this therein
+
+export ADDR = :8080
+
+export DB_ADDR=admin:adminpassword@tcp(127.0.0.1:3307)/stage_two?charset=utf8mb4&parseTime=True&loc=Local
+
 
 
 # Run the server
